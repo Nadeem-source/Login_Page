@@ -1,0 +1,535 @@
+/*
+=========================================================
+MANUAL FONT SYSTEM
+=========================================================
+
+Kyun use kiya?
+- External Google Fonts dependency remove karne ke liye
+- Pure offline/manual CSS banane ke liye
+
+Agar use nahi karte:
+- Browser default serif font aa sakta hai
+
+Alternative:
+- Local font file (.ttf/.otf)
+- Google Fonts CDN
+- Adobe Fonts
+*/
+
+body {
+
+  /*
+  Font-family define ki
+
+  Kyun?
+  Professional clean typography ke liye
+
+  Poppins unavailable ho to:
+  system fonts automatically use honge
+
+  Alternative:
+  Inter
+  Roboto
+  Montserrat
+  */
+  font-family:
+    "Segoe UI",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  /*
+  Dark background diya
+
+  Kyun?
+  Premium futuristic UI feel ke liye
+
+  Agar nahi hota:
+  White background default aata
+
+  Alternative:
+  #000
+  gradient
+  image background
+  */
+  background: #050816;
+}
+/*
+  Universal selector
+
+  Kyun?
+  Sab elements reset karne ke liye
+
+  Agar nahi hota:
+  Browser default spacing issue
+
+  Alternative:
+  CSS Reset file
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+  Body styling
+
+  Kyun?
+  Global font + background
+
+  Alternative:
+  html tag styling
+*/
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #050816;
+}
+/*
+  Main page wrapper
+*/
+.login-page {
+   /*
+    Full width
+  */
+  width: 100%;
+  /*
+    Minimum full screen height
+  */
+  min-height: 100vh;
+  /*
+    Multiple layered background gradients
+
+    Kyun?
+    Ultra premium effect
+
+    Alternative:
+    Background image
+  */
+  background:
+    radial-gradient(circle at top left, rgba(0, 255, 200, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(0, 140, 255, 0.18), transparent 30%),
+    #050816;
+    /*
+    Flex layout
+
+    Kyun?
+    Center alignment easy hota
+
+    Alternative:
+    Grid
+  */
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+   /*
+    Relative
+
+    Kyun?
+    Absolute children ko control karne ke liye
+  */
+  position: relative;
+  padding: 40px;
+}
+
+/*
+  Glow effects
+*/
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  /*
+    Blur effect
+
+    Kyun?
+    Soft neon lighting
+  */
+  filter: blur(100px);
+}
+/*
+  First glow
+*/
+.glow-1 {
+  width: 350px;
+  height: 350px;
+  background: #00ffd5;
+  top: -100px;
+  left: -100px;
+  opacity: 0.15;
+}
+/*
+  Second glow
+*/
+.glow-2 {
+  width: 350px;
+  height: 350px;
+  background: #0066ff;
+  bottom: -100px;
+  right: -100px;
+  opacity: 0.2;
+}
+/*
+  Main container
+*/
+.login-container {
+  width: 100%;
+  max-width: 1350px;
+  min-height: 760px;
+   /*
+    CSS Grid
+
+    Kyun?
+    2 equal columns
+
+    Alternative:
+    Flexbox
+  */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /*
+    Glassmorphism background
+  */
+  background: rgba(255,255,255,0.05);
+   /*
+    Blur behind container
+
+    Kyun?
+    Glass effect
+  */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 35px;
+  overflow: hidden;
+   /*
+    Premium shadow
+  */
+  box-shadow:
+    0 10px 50px rgba(0,0,0,0.4),
+    inset 0 1px 1px rgba(255,255,255,0.08);
+}
+/*
+  Left side panel
+*/
+
+.left-panel {
+  padding: 70px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.01)
+    );
+}
+/*
+  Brand heading
+*/
+.brand h1 {
+   /*
+    Big font size
+
+    Kyun?
+    Branding visibility
+  */
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 2px;
+   /*
+    Gradient text effect
+  */
+  background: linear-gradient(to right, #00ffd5, #4facfe);
+  -webkit-background-clip: text;
+  background-clip: text;
+   /*
+    Transparent text color
+
+    Kyun?
+    Gradient show karne ke liye
+  */
+  -webkit-text-fill-color: transparent;
+}
+/*
+  Brand subtitle
+*/
+
+.brand p {
+  margin-top: 10px;
+  color: rgba(255,255,255,0.7);
+}
+/*
+  Main hero heading
+*/
+.left-content h2 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+/*
+  Highlight text
+*/
+.left-content h2 span {
+  color: #00ffd5;
+}
+/*
+  Description text
+*/
+.left-content p {
+  max-width: 500px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  font-size: 17px;
+}
+/*
+  Stats wrapper
+*/
+.stats {
+  margin-top: 60px;
+  display: flex;
+  gap: 20px;
+}
+/*
+  Individual stat card
+*/
+.stat-box {
+  flex: 1;
+  padding: 25px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(15px);
+  transition: 0.4s ease;
+}
+/*
+  Hover animation
+*/
+.stat-box:hover {
+  /*
+    Slight lift effect
+  */
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.1);
+}
+
+.stat-box h3 {
+  font-size: 30px;
+  color: #00ffd5;
+  margin-bottom: 10px;
+}
+
+.stat-box span {
+  color: rgba(255,255,255,0.7);
+}
+
+.right-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35),
+    inset 0 1px 1px rgba(255,255,255,0.08);
+}
+
+.login-card h2 {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 40px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #00ffd5;
+  box-shadow: 0 0 20px rgba(0,255,213,0.2);
+}
+
+.input-group input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.options a {
+  color: #00ffd5;
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #00ffd5, #007bff);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0,123,255,0.25);
+}
+
+.login-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,123,255,0.4);
+}
+
+.divider {
+  margin: 35px 0;
+  text-align: center;
+  position: relative;
+}
+
+.divider span {
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  background: #101828;
+  padding: 0 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  top: 50%;
+  left: 0;
+}
+
+.social-login {
+  display: flex;
+  gap: 15px;
+}
+
+.social-login button {
+  flex: 1;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.social-login button:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-3px);
+}
+
+.signup-text {
+  margin-top: 35px;
+  text-align: center;
+  color: rgba(255,255,255,0.65);
+}
+
+.signup-text a {
+  color: #00ffd5;
+  text-decoration: none;
+  font-weight: 600;
+}
+/*
+  Responsive design
+*/
+@media (max-width: 1100px) {
+  /*
+    Single column layout
+  */
+  .login-container {
+    grid-template-columns: 1fr;
+  }
+/*
+    Left panel hide mobile/tablet pe
+  */
+  .left-panel {
+    display: none;
+  }
+
+  .right-panel {
+    padding: 30px;
+  }
+}
+/*
+  Mobile responsive
+*/
+@media (max-width: 600px) {
+  .login-card {
+    padding: 30px;
+  }
+
+  .login-card h2 {
+    font-size: 32px;
+  }
+ /*
+    Buttons vertical ho jayenge
+  */
+  .social-login {
+    flex-direction: column;
+  }
+}
+.loginpage-wrapper-main {
+  width: 100%;
+  min-height: 100vh;
+  background: #050816;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
